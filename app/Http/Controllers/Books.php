@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 // make sure you add this near the top, undereath the namespace declaration
 use App\Book;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\BookRequest;
 
 class Books extends Controller
 {
@@ -25,7 +25,7 @@ class Books extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BookRequest $request)
     {
       // get post request data for title and article
       $data = $request->only(["title", "author", "pages", "published", "rating", "IBSN"]);
@@ -55,7 +55,7 @@ class Books extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BookRequest $request, $id)
     {
       // find the current book
       $book = Book::find($id);

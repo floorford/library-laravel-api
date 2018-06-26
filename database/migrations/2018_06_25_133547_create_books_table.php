@@ -20,7 +20,7 @@ class CreateBooksTable extends Migration
         $table->integer('pages');
         $table->date('published');
         $table->char('IBSN', 25);
-        $table->tinyInteger('rating');
+        $table->integer('rating');
         $table->timestamps();
       });
     }
