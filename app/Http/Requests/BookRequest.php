@@ -29,7 +29,7 @@ class BookRequest extends FormRequest
       "pages" => ["required", "integer"],
       "published" => ["required", "date"],
       "rating" => ["required", "integer", "between:0,5"],
-      "IBSN" => ["required", "string", "max:25"],
+      "ibsn" => ["required", "string", "max:25"],
     ];
   }
 }
