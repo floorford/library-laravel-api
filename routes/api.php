@@ -11,3 +11,5 @@ $router->group(["prefix" => "books"], function ($router) {
   $router->put("{book}", "Books@update");
   $router->get("", "Books@index");
 });
+
+$router->post("authors", "Authors@store");
